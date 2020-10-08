@@ -10,9 +10,12 @@ import java.util.List;
 
 @Service
 public class PersonServiceImpl implements IPersonService {
+    private PersonDao personDao;
 
     @Autowired
-    private PersonDao personDao;
+    public PersonServiceImpl( PersonDao dao ) {
+        this.personDao = dao;
+    }
 
     @Override
     @Transactional(readOnly = true)

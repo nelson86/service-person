@@ -21,6 +21,16 @@ public class Person implements Serializable {
     @Temporal(TemporalType.TIMESTAMP)
     private Date createAt;
 
+    public Person(){
+    }
+
+    public Person(Long id, String firstName, String lastName, Date createAt) {
+        this.id = id;
+        this.firstName = firstName;
+        LastName = lastName;
+        this.createAt = createAt;
+    }
+
     public Long getId() {
         return id;
     }
@@ -52,4 +62,5 @@ public class Person implements Serializable {
     public void setCreateAt(Date createAt) {
         this.createAt = createAt;
     }
+
 }
